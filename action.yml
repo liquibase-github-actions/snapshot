@@ -4,7 +4,7 @@ name: 'Liquibase Snapshot Action'
 description: 'Capture the current state of the database'
 inputs:
   database: # string
-    description: 'null'
+    description: ''
     required: false
   defaultCatalogName: # string
     description: 'The default catalog name to use for the database connection'
@@ -25,7 +25,7 @@ inputs:
     description: 'The schemas to snapshot'
     required: false
   snapshotControl: # string
-    description: 'null'
+    description: ''
     required: false
   snapshotFormat: # string
     description: 'Output format to use (JSON, YAML, or TXT)'
