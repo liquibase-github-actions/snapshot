@@ -21,11 +21,12 @@ message SnapshotRequest {
   optional string driver_properties_file = 5; // The JDBC driver properties file
   optional string password = 6; // Password to use to connect to the database
   optional string schemas = 7; // The schemas to snapshot
-  optional string snapshot_control = 8;
-  optional string snapshot_format = 9; // Output format to use (JSON, YAML, or TXT)
-  string url = 10; // *required* The JDBC database connection URL
-  optional string username = 11; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 12;
+  optional bool skip_database_step = 8;
+  optional string snapshot_control = 9;
+  optional string snapshot_format = 10; // Output format to use (JSON, YAML, or TXT)
+  string url = 11; // *required* The JDBC database connection URL
+  optional string username = 12; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 13;
 }
 
 message Response {

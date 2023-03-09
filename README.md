@@ -6,7 +6,7 @@ Capture the current state of the database
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/snapshot@v4.19.1
+- uses: liquibase-github-actions/snapshot@v4.20.0
   with:
     # The JDBC database connection URL
     # string
@@ -49,6 +49,11 @@ steps:
     schemas: ""
 
     # 
+    # bool
+    # Optional
+    skipDatabaseStep: ""
+
+    # 
     # string
     # Optional
     snapshotControl: ""
@@ -75,7 +80,7 @@ The liquibase snapshot action accepts all valid liquibase global options as opti
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/snapshot@v4.19.1
+  - uses: liquibase-github-actions/snapshot@v4.20.0
     with:
       url: ""
       headless: true
