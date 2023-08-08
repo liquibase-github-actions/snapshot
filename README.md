@@ -13,11 +13,6 @@ steps:
     # Required
     url: ""
 
-    # 
-    # string
-    # Optional
-    database: ""
-
     # The default catalog name to use for the database connection
     # string
     # Optional
@@ -47,16 +42,6 @@ steps:
     # string
     # Optional
     schemas: ""
-
-    # 
-    # bool
-    # Optional
-    skipDatabaseStep: ""
-
-    # 
-    # string
-    # Optional
-    snapshotControl: ""
 
     # Output format to use (JSON, YAML, or TXT)
     # string
