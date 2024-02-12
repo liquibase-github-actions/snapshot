@@ -20,10 +20,11 @@ message SnapshotRequest {
   optional string driver_properties_file = 4; // The JDBC driver properties file
   optional string password = 5; // Password to use to connect to the database
   optional string schemas = 6; // The schemas to snapshot
-  optional string snapshot_format = 7; // Output format to use (JSON, YAML, or TXT)
-  string url = 8; // *required* The JDBC database connection URL
-  optional string username = 9; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 10;
+  optional string snapshot_filters = 7; // [PRO] Types of objects to snapshot: Catalog, CheckConstraint, Column, DatabasePackage, DatabasePackageBody, ForeignKey, Function, Index, PrimaryKey, Schema, Sequence, StoredProcedure, Synonym, Table, Trigger, UniqueConstraint, View
+  optional string snapshot_format = 8; // Output format to use (JSON, YAML, or TXT)
+  string url = 9; // *required* The JDBC database connection URL
+  optional string username = 10; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 11;
 }
 
 message Response {
